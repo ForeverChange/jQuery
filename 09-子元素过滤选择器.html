@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="js/jquery-3.6.0.js"></script>
+
+    <script>
+        $(Document).ready(function () {
+            $('#btn1').click(function () {
+                $('div.one :nth-child(2)').css('backgroundColor','red');
+                
+            })
+
+            $('#btn2').click(function () {
+                $('div.one :first-child').css('backgroundColor','red');
+                
+            })
+
+            $('#btn3').click(function () {
+                $('div.one :last-child').css('backgroundColor','red');
+                
+            })
+            $('#btn4').click(function () {
+                $('div.one :only-child').css('backgroundColor','red');
+                
+            })
+        })
+    </script>
+
+    <title></title>
+    <style>
+        div,span,p{
+            width:250px;
+            height:250px;
+            margin:5px;
+            border:1px solid blue;
+            float:left;
+        }
+        div.mini{
+            width:100px;
+            height:100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="one" class="one">
+        id为one,class为one的div
+        <div class="mini">
+            class为mini的div
+        </div>
+    </div>
+    <div id="two" class="one" title="test">
+        id为two，class为one，title为test的div
+        <div class="mini" title="other">
+            class为mini,title为other的div
+        </div>
+        <div class="mini" title="test">
+            class为mini，title为test的div
+        </div>
+    </div>
+    <div class="one">
+        <div class="mini">1111 class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>        
+    </div>
+    <div class="one">
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini" title="test">class为mini，title为test的div</div>
+    </div>
+    <p>这是p标签</p>
+    <span>这是span标签</span>
+    <input type="button" value="改变class为one的div 父元素下的第二个背景颜色" id="btn1" />
+    <input type="button" value="改变class为one的div 父元素的第一个子元素背景色" id="btn2" />
+    <input type="button" value="改变class为one的div 父元素的最后一个子元素背景色" id="btn3" />
+    <input type="button" value="改变class为one的div 父元素的唯一一个子元素背景色" id="btn4" />
+   
+</body>
+</html>
+\

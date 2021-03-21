@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <style>
+        input{
+           color: #ccc; 
+        }
+    </style>
+    <script>
+         $(document).ready(function () {
+            $("input").focus(function () {
+                $('input').val("");
+            
+            })
+
+            $("input").blur(function () {
+                $('#zh').val("请输入邮箱地址");
+                $('#mm').val("请输入邮箱密码");
+            })
+           
+        });
+    </script>
+</head>
+<body>
+    <p>首页--登录</p>
+    
+    用户名:<input type="text"  value="请输入邮箱地址" id="zh" >
+    <br>
+    密   码:<input type="text"  value="请输入邮箱密码" id="mm">
+</body>
+</html>

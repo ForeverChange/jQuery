@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+
+           $("#btn1").click(function () {
+            $('div:first').css('backgroundColor','yellow')
+           })
+
+           $("#btn2").click(function () {
+            $('div:last').css('backgroundColor','yellow')
+           })
+
+           $("#btn3").click(function () {
+            $('div:not(.one)').css('backgroundColor','yellow')
+           })
+           $("#btn4").click(function () {
+            $('div:even').css('backgroundColor','yellow')
+           })
+           $("#btn5").click(function () {
+            $('div:odd').css('backgroundColor','yellow')
+           })
+
+           $("#btn6").click(function () {
+            $('div:eq(3)').css('backgroundColor','yellow')
+           })
+
+           $("#btn7").click(function () {
+            $('div:gt(3)').css('backgroundColor','yellow')
+           })
+
+           $("#btn8").click(function () {
+            $('div:lt(3)').css('backgroundColor','yellow')
+           })
+
+           $("#btn9").click(function () {
+            $('*').css('backgroundColor','yellow')
+           })
+
+
+           $("#btn10").click(function () {
+           $('#dh').show(3000);
+           $(':animated').css('backgroundColor','yellow')
+           })
+        })
+    </script>
+    <title></title>
+    <style>
+        div,span,p{
+            width:250px;
+            height:250px;
+            margin:5px;
+            border:1px solid blue;
+            float:left;
+        }
+        div.mini{
+            width:100px;
+            height:100px;
+        }
+        #dh{
+            border:1px solid red; 
+            width:250px;
+            height:250px;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="one" class="one">
+        id为one,class为one的div
+        <div class="mini">
+            class为mini的div
+        </div>
+    </div>
+    <div id="two" class="one" title="test">
+        id为two，class为one，title为test的div
+        <div class="mini" title="other">
+            class为mini,title为other的div
+        </div>
+        <div class="mini" title="test">
+            class为mini，title为test的div
+        </div>
+    </div>
+    <div class="one">
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>        
+    </div>
+    <div class="one">
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini">class为mini的div</div>
+        <div class="mini" title="test">class为mini，title为test的div</div>
+    </div>
+    <p>这是p标签</p>
+    <span>这是span标签</span>
+    <div id="dh">这是动画</div>
+    <input type="button" value="改变第一个<div>元素背景" id="btn1" />
+    <input type="button" value="改变最后一个<div>元素背景" id="btn2" />
+    <input type="button" value="改变class不为one的<DIV>元素背景" id="btn3" />
+    <input type="button" value="改变索引值为偶数的《div》元素背景色" id="btn4" />
+    <input type="button" value="改变索引值为寄数的《div》元素背景色" id="btn5" />
+    <input type="button" value="改变索引值等于3的<DIV>元素背景色" id="btn6" />
+    <input type="button" value="改变索引值大于3的<DIV>元素背景色" id="btn7" />
+    <input type="button" value="改变索引值小于3的<DIV>元素背景色" id="btn8" />
+    <input type="button" value="改变所有的标题元素" id="btn9" />
+    <input type="button" value="改变正在执行的动画" id="btn10" />
+</body>
+</html>
