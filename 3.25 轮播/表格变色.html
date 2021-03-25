@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.h{
+				background-color: #d9ffdc;
+			}
+			.y{
+				background-color: #a5e5aa;
+			}
+			.z{
+				background-color: #00a40c;
+			}
+			.a{
+				background-color: #ff9;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.6.0.js" ></script>
+		
+		<script>
+			$().ready(function(){
+				$('tr:odd').addClass('h')
+				$('tr:even').addClass('y')
+				$('tr:first').addClass('z')
+				$('table').mousemove(function(){
+				$('.ddlist tr:not(:first)').mouseover(function(){
+					$(this).addClass('a');
+				})
+				$('.ddlist tr:not(:first)').mouseout(function(){
+					$(this).removeClass('a');
+				})
+//					$(' tr').mouseover(function(){
+//						
+//					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<table>
+			<table border="1" class="ddlist">
+				<tr>
+					<td>学号</td>
+					<td>姓名</td>
+					<td>性别</td>
+					<td>年龄</td>
+					<td>电话号码</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+				<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+				<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>20141201</td>
+					<td>123</td>
+					<td>男</td>
+					<td>18</td>
+					<td>110</td>
+				</tr>
+			</table>
+
+		</table>
+	</body>
+</html>

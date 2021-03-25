@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="js/jquery-3.6.0.js" ></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <title></title>
+    <script>
+    	$().ready(function(){
+    		var imgOuter = $('.wrap');
+		    var imgDiv = $ ('.pic');
+		    var timeId = null;
+		    var edgeDistance = 91;
+		    var imgNow = 0;
+		    var imgMouse = 0;
+		    var imgOutWidth =imgOuter.width();
+    
+    function autoSlide(){
+    	if(imgNow==5){
+    		imgNow = 0;
+    	}else{
+    		imgNow++;
+    	}
+    	if(imgNow == 0){
+    		for (var i = 5; i>0; i--) {
+    			imgDiv.eq(i).animate({"left":imgMouse-(6-1)*edgeDistance+"px"},2000);
+    		}
+    	}else{
+    			imgDiv.eq(imgNow).animate({"left":imgNow*edgeDistance+"px"},2000)
+    		}
+    	
+    	
+   		 }
+    timeId =setInterval(autoSlide ,3000);
+    	})
+    
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="pic1 pic">
+            <div class="pic_num1 pic_num"></div>
+        </div>
+        <div class="pic2 pic">
+            <div class="pic_num2 pic_num"></div>
+        </div>
+        <div class="pic3 pic">
+            <div class="pic_num3 pic_num"></div>
+        </div>
+        <div class="pic4 pic">
+            <div class="pic_num4 pic_num"></div>
+        </div>
+        <div class="pic5 pic">
+            <div class="pic_num5 pic_num"></div>
+        </div>
+        <div class="pic6 pic">
+            <div class="pic_num6 pic_num"></div>
+        </div>
+    </div>
+</body>
+</html>
